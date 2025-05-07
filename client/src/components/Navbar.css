@@ -1,0 +1,197 @@
+/* Navbar.css (Versión mejorada) */
+.navbar {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    color: #FF8C00;
+    margin: 0;
+    font-weight: 700;
+}
+
+.sublogo {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #333333;
+    margin: 0;
+    font-weight: 400;
+}
+
+.divider-line {
+    width: 1px;
+    height: 38px;
+    background: #4A4A4A;
+    margin: 0 1.5rem;
+    opacity: 0.6;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4A4A4A;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.contact-button {
+    background: #FF8C00;
+    color: #ffffff;
+    padding: 0.75rem 2.25rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.2);
+}
+
+.contact-button:hover {
+    transform: translateY(-1.5px);
+    background: #FF6B00;
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.3);
+}
+
+.contact-button::after {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .navbar-container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1.8rem;
+    }
+    
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    .sublogo {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .sublogo {
+        font-size: 0.75rem;
+    }
+
+    .divider-line {
+        height: 32px;
+        margin: 0 1rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .contact-button {
+        padding: 0.6rem 1.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 0.8rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .sublogo {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .divider-line {
+        height: 28px;
+        margin: 0 0.8rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.85rem;
+    }
+
+    .contact-button {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}

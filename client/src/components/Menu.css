@@ -1,0 +1,31 @@
+.menu-container {
+    padding: 120px 5% 5%;
+    min-height: 100vh;
+    background: var(--background-light);
+}
+
+.menu-container h1 {
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .menu-container {
+        padding: 100px 3% 3%;
+    }
+
+    .menu-content {
+        padding: 1.5rem;
+    }
+} 
